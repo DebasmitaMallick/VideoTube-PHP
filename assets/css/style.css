@@ -1,0 +1,1226 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#pageContainer {
+    width: 100%;
+    height: fit-content;
+    /* background-color: #fafafa; */
+}
+
+#mastHeadContainer {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 7px 16px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+#mastHeadContainer button:not(.searchButton),
+#mastHeadContainer .rightIcons img {
+    cursor: pointer;
+    width: 35px;
+    height: 36px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+}
+
+#searchIcon{
+    flex-grow: 6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#searchIcon img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+#backIcon{
+    cursor: pointer;
+}
+
+#mastHeadContainer .rightIcons {
+    height: 100%;
+}
+
+#mastHeadContainer button img {
+    width: 100%;
+}
+
+#mastHeadContainer .logoContainer {
+    width: 150px;
+}
+
+#mastHeadContainer .logoContainer img {
+    height: 53px !important;
+    margin-left: 8px;
+}
+.navShowHide{
+    padding: 0.6rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#sideNavContainer {
+    background-color: white;
+    padding-top: 56px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 208px;
+    box-shadow:
+    11.6px 3.3px 10px rgba(0, 0, 0, 0.03),
+    93px 26px 80px rgba(0, 0, 0, 0.06);
+}
+#sideNavContainer .options{
+    display: flex;
+    color: black;
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 0.96rem;
+    line-height: 2rem;
+    font-weight: 500;
+    padding: 5px;
+    align-items: center;
+}
+#sideNavContainer .options:hover{
+    background-color: rgba(236, 233, 233, 0.57);
+}
+#sideNavContainer .options i{
+    padding-left: 21px;
+    padding-right: 21px;
+    font-size: 1.19rem;
+}
+#sideNavContainer .options img{
+    box-sizing: content-box !important;
+    padding-left: 23px;
+    padding-right: 23px;
+    width: 0.9rem;
+}
+
+#mainSectionContainer {
+    padding-top: 56px;
+    display: flex;
+}
+
+#mainSectionContainer.leftPadding {
+    padding-left: 73px !important;
+}
+
+#mainContentContainer {
+    padding: 0px 30px;
+    display: flex;
+    flex: 1;
+}
+
+#mastHeadContainer .searchBarContainer {
+    margin: 0 40px;
+    flex: 1;
+    display: flex;
+}
+
+#mastHeadContainer .searchBarContainer form {
+    flex: 1;
+    display: flex;
+}
+
+#mastHeadContainer .searchBarContainer .searchBar {
+    flex: 1;
+    max-width: 600px;
+    color: #111;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 100;
+    border: 1px solid #ccc;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-right: none;
+    height: 38px;
+    box-shadow: #eee 0px 1px 2px 0px inset;
+}
+
+#mastHeadContainer .searchBarContainer .searchBar:focus{
+    outline: none;
+    border: 1px solid #1c62b9;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 30%);
+}
+
+#mastHeadContainer .searchBarContainer .searchButton {
+    height: 38px;
+    background-color: #f8f8f8;
+    border: 1px solid #d3d3d3;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    cursor: pointer;
+    width: 65px;
+}
+
+#mastHeadContainer .searchBarContainer .searchButton img {
+    height: 20px;
+    width: 20px;
+}
+
+.column {
+    flex-grow: 1;
+    background-color: #fff;
+    min-height: 300px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+}
+
+.signInContainer {
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signInContainer .column .header #headerTitle{
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+.signInContainer .column .header img {
+    width: 100px;
+}
+
+.signInContainer .column {
+    flex-grow: 0;
+    width: 450px;
+    padding: 20px 35px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* .signInContainer .column .header {
+    padding: 20px 0;
+} */
+
+.signInContainer .column .header h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 16px;
+}
+
+.signInContainer .column .header span {
+    font-size: 14px;
+}
+
+/* .signInContainer .column .loginForm {
+    padding-top: 24px;
+} */
+
+.signInContainer .column .header p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.signInContainer .column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signInContainer .column form input[type="text"],
+.signInContainer .column form input[type="email"],
+.signInContainer .column form input[type="password"],
+.signInContainer .column form label,
+.signInContainer .column select {
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+.signInContainer .column form input[type="submit"] {
+    background: #4285f4;
+    color: #fff;
+    height: 36px;
+    width: 88px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.signInMessage {
+    font-size: 14px;
+    font-weight: 400;
+    color: #212529;
+}
+
+.errorMessage {
+    color: #f00;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.watchLeftColumn {
+    flex: 1;
+}
+
+.watchLeftColumn .videoPlayer {
+    width: 100%;
+    aspect-ratio: 1.79;
+    background-color: #000;
+}
+
+.suggestions {
+    max-width: 425px;
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 24px;
+}
+
+.videoInfo {
+    width: 100%;
+    padding: 20px 0 8px 0;
+}
+
+.videoInfo h1 {
+    display: block;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.videoInfo .bottomSection {
+    display: flex;
+}
+
+.videoInfo .bottomSection .viewCount {
+    color: rgba(17, 17, 17, 0.6);
+    font-size: 16px;
+    flex: 1;
+}
+
+.videoInfo .bottomSection .controls {
+    flex: 1;
+    text-align: right;
+}
+
+.videoInfo .bottomSection .controls button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: rgba(17, 17, 17, 0.4);
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.videoInfo .bottomSection .controls button img {
+    height: 20px;
+    width: 20px;
+    margin: 4px 8px 8px 8px;
+}
+
+.secondaryInfo .topRow {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.profilePicture {
+    height: 100%;
+}
+
+.secondaryInfo .topRow .profilePicture {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.secondaryInfo .topRow .uploadInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.secondaryInfo .topRow .uploadInfo .date {
+    color: rgba(17,17,17,0.6);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.secondaryInfo .descriptionContainer {
+    margin-left: 64px;
+    max-width: 615px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.secondaryInfo {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.secondaryInfo .topRow .button {
+    padding: 6px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 2px;
+    border: none;
+    font-size: 14px;
+}
+
+.secondaryInfo .topRow .subscribeButtonContainer,
+.secondaryInfo .topRow .editVideoButtonContainer,
+.secondaryInfo .topRow .deleteVideoButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0.5rem;
+}
+
+.subscribeButtonContainer .subscribe {
+    background-color: #c00;
+    color: #fff;
+}
+
+.subscribeButtonContainer .unsubscribe {
+    background-color: #eee;
+    color: rgba(17,17,17,0.6);
+}
+
+.editVideoButtonContainer .edit {
+    background-color: #2692e6;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.deleteVideoButtonContainer .delete{
+    background-color: #c00;
+    color: #fff;
+}
+
+.secondaryInfo .topRow .uploadInfo .owner a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+@media screen and (max-width: 807px){
+    #sideNavContainer{
+        display: none;
+    }
+    #mainSectionContainer{
+        padding-left: 0 !important;
+    }
+    #nav-ham{
+        display: flex !important;
+        padding-left: 1rem;
+    }
+    #logo-top{
+        height: 53px !important;
+        margin-left: 8px;
+    }
+}
+
+
+/* ------------------------alernative classes for left nav compress on large viewport :: STARTS------------------------  */
+.sideNavContainer-compress{
+    width: 83px !important;
+}
+.sidenav-mainItem-compress{
+    margin: 21px 0 !important;
+}
+.sidenav-item-compress{
+    flex-direction: column !important;
+    padding: unset !important;
+}
+.sidenav-img-compress{
+    margin-right: unset !important;
+}
+.sidenav-span-compress{
+    font-size: 10.4px !important;
+}
+.navitem-display-none{
+    display: none !important;
+}
+.sidenav-heading-compress{
+    padding: 0 !important;
+    font-size: 13px !important;
+}
+.searchbar-margin{
+    margin: 0 10px !important;
+}
+/* ------------------------alernative classes for left nav compress on large viewport :: ENDS------------------------  */
+
+
+/* ------------------------alernative classes for left nav expand on small viewport :: STARTS------------------------  */
+.sideNavContainer-expand-sm{
+    z-index: 10;
+    display: flex !important;
+    top: 0;
+    padding-top: 0 !important;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+
+}
+/* ------------------------alernative classes for left nav expand on small viewport :: ENDS------------------------  */
+
+.commentSection .header {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.commentSection .header .commentForm .profilePicture,
+.commentSection .comment .profilePicture,
+.commentForm .profilePicture {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.commentSection .header .commentCount {
+    margin-bottom: 24px;
+}
+
+.commentSection .header .commentForm,
+.itemContainer .commentForm {
+    display: flex;
+}
+
+.commentSection .header .commentForm textarea,
+.itemContainer .commentForm textarea {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #111;
+    resize: none;
+}
+
+.itemContainer .commentForm textarea {
+    height: 30px;
+}
+
+.commentSection .header .commentForm .postComment,
+.itemContainer .commentForm .postComment,
+.itemContainer .commentForm .cancelComment {
+    height: 36px;
+    background-color: #2692e6;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    padding: 0 15px;
+    border-radius: 2px;
+}
+
+.itemContainer .commentForm .cancelComment {
+    background-color: transparent;
+    color: rgba(17,17,17,0.6);
+}
+
+.itemContainer .commentForm .cancelComment:hover {
+    color:#000;
+}
+
+.commentSection .itemContainer {
+    margin-bottom: 16px;
+}
+
+.commentSection .comment {
+    display: flex;
+}
+
+.commentSection .commentHeader {
+    margin-bottom: 2px;
+}
+
+.commentSection .comment .username {
+    margin-right: 8px;
+    color: #111;
+    font-size: 13px;
+    font-weight:500;
+}
+
+.commentSection .comment .body {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.itemContainer .controls {
+    margin-left: 64px
+}
+
+.itemContainer .controls button,
+.itemContainer .controls .likesCount {
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(17,17,17,0.6);
+}
+
+.itemContainer .controls button {
+    cursor: pointer;
+}
+
+.itemContainer .controls .likesCount {
+    margin: 0 5px;
+}
+
+.itemContainer .controls button img {
+    height: 16px;
+}
+
+.itemContainer .commentForm .profilePicture {
+    width: 30px;
+    height: 30px;
+}
+
+.commentSection .comment .timestamp {
+    color: #888;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.comments .repliesSection {
+    padding-left: 64px;
+    margin-top : 16px;
+}
+
+.commentSection .itemContainer .viewReplies {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.videoGrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.suggestions .videoGridItem {
+    display: flex;
+    height: auto;
+}
+
+.videoGridItem {
+    height: 200px;
+    margin-right: 4px;
+    margin-bottom: 24px;
+}
+
+.videoGridItem .thumbnail {
+    width: 210px;
+    height: 118px;
+    position: relative;
+}
+
+.suggestions .videoGridItem .thumbnail {
+    margin-right: 8px;
+}
+
+.videoGridItem .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.videoGridItem .thumbnail .duration {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    margin: 4px;
+    color: #fff;
+    background-color: rgba(17,17,17,0.8);
+    opacity: 0.8;
+    padding: 2px 4px;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+}
+
+.videoGridItem .details {
+    padding-right: 24px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+}
+
+.suggestions .videoGridItem .details {
+    padding-right: 0;
+    flex: 1;
+}
+
+.videoGridItem .details .title {
+    margin: 8px 0;
+    max-height: 32px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #212529;
+}
+
+.videoGridItem .details .username,
+.videoGridItem .details .stats {
+    color: rgba(17,17,17,0.6);
+    font-size: 13px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.videoGridHeader {
+    display: flex;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.videoGridHeader div {
+    flex: 1;
+}
+
+.videoGrid.large {
+    flex-direction: column;
+    flex: 1;
+}
+
+.videoGrid.large .videoGridItem {
+    height: auto;
+    display: flex;
+}
+
+.videoGrid.large .videoGridItem .thumbnail {
+    width: 266px;
+    height: 138px;
+    margin-right: 16px;
+}
+
+.videoGrid.large .videoGridItem .details {
+    max-width: 600px;
+    flex: 1;
+}
+
+.videoGrid.large .videoGridItem .details .title {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.videoGridItem .details .description {
+    color: rgba(17,17,17,0.6);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.largeVideoGridContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoGridHeader .right {
+    text-align: right;
+}
+
+.videoGridHeader a {
+    color: rgba(17,17,17,0.6);
+}
+
+.videoGridHeader a:after {
+    content: ' |'
+}
+
+.videoGridHeader a:last-child:after {
+    content: ''
+}
+
+.signInLink {
+    color: #f00;
+    /* margin-left: 15px; */
+}
+
+#sideNavContainer .navigationItems{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#sideNavContainer .navigationItem {
+    height: 40px;
+    display: flex;
+}
+
+#sideNavContainer .navigationItem img {
+    height: 18px;
+    margin-right: 27px;
+}
+
+#sideNavContainer .navigationItem span {
+    flex: 1;
+    color: #111;
+    font-size: 14px;
+}
+
+#sideNavContainer .navigationItem a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+}
+
+#sideNavContainer .navigationItem a:hover {
+    background-color: rgba(0,0,0, 0.04);
+}
+
+#sideNavContainer .heading {
+    color: rgba(17,17,17,0.6);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 24px 0;
+    border-top: 1px solid #ededed;
+    display: block;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.coverPhotoContainer {
+    height: 200px;
+    flex: 1;
+    position: relative;
+}
+
+.coverPhotoContainer .coverPhoto {
+    width: 100%;
+    object-fit: cover;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.coverPhotoContainer .channelName {
+    position: absolute;
+    top: calc(50% - 40px);
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 5px;
+}
+
+.profileHeader {
+    padding: 15px 100px 0 0;
+    display: flex;
+    height: 100px;
+}
+
+.userInfoContainer {
+    flex: 1;
+    display: flex;
+}
+
+.profileHeader .userInfoContainer .profileImage {
+    height: 80px;
+    width: 80px;
+}
+
+.profileHeader .userInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profileHeader .userInfo .title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #111;
+}
+
+.profileHeader .userInfo .subscriberCount {
+    font-size: 14px;
+    color: rgba(17,17,17,0.6);
+}
+
+.profileHeader .buttonContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profileHeader .buttonContainer .buttonItem {
+    align-items: center;
+    display: flex;
+}
+
+.profileHeader .buttonContainer .buttonItem button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.profileContainer .channelContent {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.nav-item a {
+    color: rgba(17,17,17,0.6);
+}
+
+.channelContent .section .values {
+    color: rgba(17,17,17,0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection:not(:last-child) {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dedede
+}
+
+.settingsContainer form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editVideoContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.editVideoContainer .topSection {
+    display: flex;
+}
+
+.topSection .videoPlayer {
+    max-height: 300px;
+    flex: 1;
+}
+
+.editVideoContainer .topSection .thumbnailItemsContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    width: 210px;
+}
+
+.editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem {
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+.editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem.selected {
+border: 3px solid #828282;
+}
+
+.editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.active-page{
+    background-color: #cac9c9 !important;
+}
+.active-page-font{
+    color: black;
+    font-weight: bolder;
+}
+
+.close{
+    padding: 3% !important;
+    float: right !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: #000 !important;
+    text-shadow: 0 1px 0 #fff !important;
+    opacity: .5 !important;
+}
+
+.modal-body{
+    text-align: center !important;
+}
+
+#categoryList table input[type="checkbox"]{
+    margin-right: 0.5rem !important;
+}
+#admin{
+    margin: 0 3px 0 10px !important;
+}
+#checkAllRoles{
+    margin: 0 3px 0 12px !important;
+}
+#profileDropdown{
+    display: none;
+    z-index: 20000;
+    width: 11rem;
+    right: 1rem;
+    position: absolute;
+}
+#profileDropdown a{
+    color: #111;
+    font-size: 14px;
+}
+#dashboardIcon{
+    padding: 8px;
+    font-size: 19px;
+    color: #7e7b7b;
+}
+
+/* #editCategoryCard .card-body{
+    display: none;
+} */
+#editCategoryCard .card-header .card-title,
+#editCategoryCard .card-header .card-tools,
+#assignRolesCard .card-header .card-title,
+#assignRolesCard .card-header .card-tools,
+#notificationCard .card-header .card-title,
+#notificationCard .card-header .card-tools{
+    display: inline-block !important;
+}
+#editCategoryCard .card-header .card-tools,
+#assignRolesCard .card-header .card-tools,
+#notificationCard .card-header .card-tools{
+    position: absolute;
+    right: 1rem;
+}
+#categoryBody .card-body table input{
+    margin-right: 0.5rem;
+}
+#categoryBody .card-body .categoryFeature2{
+    position: absolute;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0) !important;
+    color: #7e7b7b;
+}
+#categoryBody .card-body .categoryFeature2:hover{
+    color: hsl(2, 100%, 58%);
+}
+#categoryBody .card-body .categoryFeature1{
+    position: absolute;
+    right: 4rem;
+    background: rgba(255, 255, 255, 0) !important;
+    color: #7e7b7b;
+}
+#categoryBody .card-body .categoryFeature1:hover{
+    color: hsl(35, 100%, 62%);
+}
+/* #newCategory{
+    display: inline-block !important;
+    width: 92% !important;
+} */
+#categoryBody #checkAll{
+    margin-left: 0.7rem !important;
+    margin-right: 0.5rem !important;
+}
+/* #categoryBody .categoryTool{
+    position: absolute;
+}*/
+#categoryBody .categoryTool1{
+    position: absolute !important;
+    right: 9rem !important;
+}
+#categoryBody .categoryTool2{
+    position: absolute !important;
+    right: 2.5rem !important;
+}
+#categoryList label{
+    margin-right: 1rem !important;
+}
+
+.edit-tools{
+    display: none;
+    font-size: 1rem !important;
+    background:white !important;
+    border-radius:50% !important;
+    margin-right: 5px !important;
+}
+
+/* TRASH::STARTS */
+.disableCheck{
+    outline: none !important;
+}
+
+
+/* ..............Video grid notification::STARTS........... */
+#notificationTable .videoGridItem,
+#requestStatusTable .videoGridItem {    
+    /* 663 */
+    height: auto !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* 2. class="thumbnail": */
+#notificationTable .videoGrid.large .videoGridItem .thumbnail,
+#requestStatusTable .videoGrid.large .videoGridItem .thumbnail {
+    /* 754 */
+    width: 95px !important;
+    height: 61px !important;
+    margin-right: 9px !important;
+}
+#notificationTable .videoGridItem .thumbnail,
+#requestStatusTable .videoGridItem .thumbnail {
+    /* 669 */
+    width: 6rem !important;
+    height: 4rem !important;
+    /* position: relative; */
+}
+/* 3. class="details": */
+#notificationTable .videoGrid.large .videoGridItem .details,
+#requestStatusTable .videoGrid.large .videoGridItem .details {
+    /* 760 */
+    max-width: 157px !important;
+    flex: 1 !important;
+}
+#notificationTable .videoGridItem .details,
+#requestStatusTable .videoGridItem .details {
+    /* 700 */
+    width: unset !important;
+}
+
+/* 4. class="title": */
+#notificationTable .videoGrid.large .videoGridItem .details .title,
+#requestStatusTable .videoGrid.large .videoGridItem .details .title {
+    /* 765 */
+    font-size: 14px !important;
+    line-height: 24px !important;
+}
+#notificationTable .videoGridItem .details .title,
+#requestStatusTable .videoGridItem .details .title {
+    /* 714 */
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 15px !important;
+}
+
+/* 5. class="username": */
+#notificationTable .videoGridItem .details .username, .videoGridItem .details .stats,
+#requestStatusTable .videoGridItem .details .username, .videoGridItem .details .stats {
+    /* 725 */
+    font-size: 12px !important;
+}
+
+/* 9. class="description": */
+#notificationTable .videoGridItem .details .description,
+#requestStatusTable .videoGridItem .details .description {
+    /* 770 */
+    font-size: 12px !important;
+}
+
+/* ..............Video grid notification::ENDS........... */
+
+
+
+#privilegesCard .card-title,
+#requestStatusCard .card-title{
+    display: inline-block !important;
+}
+#privilegesCard .card-tools,
+#requestStatusCard .card-tools{
+    position: absolute !important;;
+    display: inline-block !important;;
+    right: 24px !important;;
+}
+#privilegesCard,#requestStatusCard{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.checkAllRoles{
+    position: absolute !important;
+    left: 29px !important;
+}
+.checkAllRoles input{
+    margin-right: 8px !important;
+}
+    
+.assignRolesCards{
+    box-shadow:
+    0px 1.5px 2.2px rgba(0, 0, 0, 0.039),
+    0px 3.7px 5.3px rgba(0, 0, 0, 0.057),
+    0px 7px 10px rgba(0, 0, 0, 0.07),
+    0px 12.5px 17.9px rgba(0, 0, 0, 0.083),
+    0px 23.4px 33.4px rgba(0, 0, 0, 0.101),
+    0px 56px 80px rgba(0, 0, 0, 0.14)
+    ;
+    width: 100% !important;
+
+}
+.normalUserInfo{
+    margin-right: 1px !important;
+    margin-left: 1px !important;
+}
+
+
